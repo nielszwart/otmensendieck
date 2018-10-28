@@ -1,0 +1,323 @@
+# Translation of Themes - Bootstrap Basic in English (UK)
+# This file is distributed under the same license as the Themes - Bootstrap Basic package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2016-10-16 16:37:10+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.3.0-alpha\n"
+"Language: en_GB\n"
+"Project-Id-Version: Themes - Bootstrap Basic\n"
+
+#. Description of the plugin/theme
+msgid "Bootstrap v.3 basic theme for developers to build their new theme very fast and easy. You can support theme author by <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE\" target=\"donate\">donate</a>. To follow what was changed, please look for <a href=\"https://github.com/Rundiz/bootstrap-basic\" target=\"commits\">commits</a> of this theme at Github."
+msgstr "Bootstrap v.3 basic theme for developers to build their new theme very fast and easily. You can support the theme author by <a href=\"https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=9HQE4GVV4KTZE\" target=\"donate\">donating</a>. To follow what was changed, please look for <a href=\"https://github.com/Rundiz/bootstrap-basic\" target=\"commits\">commits</a> of this theme at Github."
+
+#. Theme Name of the plugin/theme
+msgid "Bootstrap Basic"
+msgstr "Bootstrap Basic"
+
+#: comments.php:115
+msgid "Comment"
+msgstr "Comment"
+
+#: inc/BootstrapBasicAdminHelp.php:10
+msgid "Bootstrap Basic help"
+msgstr "Bootstrap Basic help"
+
+#: searchform.php:9
+msgctxt "label"
+msgid "Search for"
+msgstr "Search for"
+
+#: search.php:20
+msgid "Search Results for: %s"
+msgstr "Search Results for: %s"
+
+#: no-results.php:20
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+
+#: no-results.php:17
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+
+#: no-results.php:15
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+
+#: no-results.php:10
+msgid "Nothing Found"
+msgstr "Nothing Found"
+
+#: inc/widgets/BootstrapBasicSearchWidget.php:98 searchform.php:11
+msgctxt "label"
+msgid "Search for:"
+msgstr "Search for:"
+
+#: inc/widgets/BootstrapBasicSearchWidget.php:47
+msgid "Right"
+msgstr "Right"
+
+#: inc/widgets/BootstrapBasicSearchWidget.php:46
+msgid "Left"
+msgstr "Left"
+
+#: inc/widgets/BootstrapBasicSearchWidget.php:44
+msgid "Form alignment:"
+msgstr "Form alignment:"
+
+#: inc/widgets/BootstrapBasicSearchWidget.php:22
+msgid "Display Search widget for Bootstrap navbar."
+msgstr "Display Search widget for Bootstrap navbar."
+
+#: inc/widgets/BootstrapBasicSearchWidget.php:21
+msgid "Bootstrap Navbar Search"
+msgstr "Bootstrap Navbar Search"
+
+#: inc/template-tags.php:305
+msgid "Tagged"
+msgstr "Tagged"
+
+#: inc/template-tags.php:288
+msgid "View all posts by %s"
+msgstr "View all posts by %s"
+
+#: inc/template-tags.php:280
+msgid "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+msgstr "<span class=\"posted-on\">Posted on %1$s</span><span class=\"byline\"> by %2$s</span>"
+
+#: inc/template-tags.php:207
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:111
+msgid "Log in to Reply"
+msgstr "Log in to Reply"
+
+#: inc/template-tags.php:110
+msgid "Reply"
+msgstr "Reply"
+
+#: inc/template-tags.php:98
+msgid "%s <span class=\"says\">says:</span>"
+msgstr "%s <span class=\"says\">says:</span>"
+
+#: inc/template-tags.php:93
+msgid "Your comment is awaiting moderation."
+msgstr "Your comment is awaiting moderation."
+
+#: inc/template-tags.php:79
+msgctxt "1: date, 2: time"
+msgid "%1$s at %2$s"
+msgstr "%1$s at %2$s"
+
+#: inc/template-tags.php:45 inc/template-tags.php:86 inc/template-tags.php:148
+msgid "Edit"
+msgstr "Edit"
+
+#: inc/template-tags.php:43
+msgid "Pingback:"
+msgstr "Pingback:"
+
+#: inc/template-tags.php:18
+msgid "Posted in"
+msgstr "Posted in"
+
+#: inc/extras.php:135
+msgid "Page %s"
+msgstr "Page %s"
+
+#: image.php:43
+msgid "Next <span class=\"meta-nav\">&rarr;</span>"
+msgstr "Next <span class=\"meta-nav\">&rarr;</span>"
+
+#: image.php:42
+msgid "<span class=\"meta-nav\">&larr;</span> Previous"
+msgstr "<span class=\"meta-nav\">&larr;</span> Previous"
+
+#: image.php:24
+msgid "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+msgstr "Published <span class=\"entry-date\"><time class=\"entry-date\" datetime=\"%1$s\">%2$s</time></span> at <a href=\"%3$s\" title=\"Link to full-size image\">%4$s &times; %5$s</a> in <a href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+
+#: header.php:65
+msgid "Toggle navigation"
+msgstr "Toggle navigation"
+
+#: header.php:49
+msgid "Skip to content"
+msgstr "Skip to content"
+
+#: functions.php:120
+msgid "Footer right"
+msgstr "Footer right"
+
+#: functions.php:111
+msgid "Footer left"
+msgstr "Footer left"
+
+#: functions.php:102
+msgid "Sidebar right"
+msgstr "Sidebar right"
+
+#: functions.php:93
+msgid "Sidebar left"
+msgstr "Sidebar left"
+
+#: functions.php:84
+msgid "Navigation bar right"
+msgstr "Navigation bar right"
+
+#: functions.php:75
+msgid "Header right"
+msgstr "Header right"
+
+#: functions.php:46
+msgid "Primary Menu"
+msgstr "Primary Menu"
+
+#: footer.php:19
+msgid "Theme: %s"
+msgstr "Theme: %s"
+
+#: footer.php:17
+msgid "Powered by %s"
+msgstr "Powered by %s"
+
+#: content-single.php:40
+msgid "<span class=\"glyphicon glyphicon-link\"></span> <a href=\"%1$s\" title=\"Permalink to %2$s\" rel=\"bookmark\">permalink</a>."
+msgstr "<span class=\"glyphicon glyphicon-link\"></span> <a href=\"%1$s\" title=\"Permalink to %2$s\" rel=\"bookmark\">permalink</a>."
+
+#. translators: used between list items, there is a space after the comma
+#: content-aside.php:33 content-aside.php:43 content-link.php:43
+#: content-link.php:53 content-quote.php:30 content-quote.php:40
+#: content-single.php:29 content-single.php:32 content.php:42 content.php:52
+msgid ", "
+msgstr ", "
+
+#: content-aside.php:18 content-link.php:30 content-page.php:15
+#: content-quote.php:18 content-single.php:19 content.php:28
+msgid "Pages:"
+msgstr "Pages:"
+
+#: comments.php:121
+msgid "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+msgstr "You may use these <abbr title=\"HyperText Markup Language\">HTML</abbr> tags and attributes: %s"
+
+#: comments.php:108
+msgid "Website"
+msgstr "Website"
+
+#: comments.php:102
+msgid "Email"
+msgstr "Email"
+
+#: comments.php:96
+msgid "Name"
+msgstr "Name"
+
+#: comments.php:57
+msgid "Comments are closed."
+msgstr "Comments are closed."
+
+#: comments.php:28 comments.php:48
+msgid "Newer Comments &rarr;"
+msgstr "Newer Comments &rarr;"
+
+#: comments.php:27 comments.php:47
+msgid "&larr; Older Comments"
+msgstr "&larr; Older Comments"
+
+#: comments.php:25 comments.php:45
+msgid "Comment navigation"
+msgstr "Comment navigation"
+
+#: comments.php:20
+msgctxt "comments title"
+msgid "One comment on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s comments on &ldquo;%2$s&rdquo;"
+msgstr[0] "One comment on &ldquo;%2$s&rdquo;"
+msgstr[1] "%1$s comments on &ldquo;%2$s&rdquo;"
+
+#: archive.php:66
+msgid "Archives"
+msgstr "Archives"
+
+#: archive.php:63
+msgid "Links"
+msgstr "Links"
+
+#: archive.php:60
+msgid "Quotes"
+msgstr "Quotes"
+
+#: archive.php:57
+msgid "Videos"
+msgstr "Videos"
+
+#: archive.php:54
+msgid "Images"
+msgstr "Images"
+
+#: archive.php:51
+msgid "Asides"
+msgstr "Asides"
+
+#: archive.php:48
+msgid "Year: %s"
+msgstr "Year: %s"
+
+#: archive.php:45
+msgid "Month: %s"
+msgstr "Month: %s"
+
+#: archive.php:42
+msgid "Day: %s"
+msgstr "Day: %s"
+
+#: archive.php:34
+msgid "Author: %s"
+msgstr "Author: %s"
+
+#. translators: %1$s: smiley
+#: 404.php:48
+msgid "Try looking in the monthly archives. %1$s"
+msgstr "Try looking in the monthly archives. %1$s"
+
+#: 404.php:31
+msgid "Most Used Categories"
+msgstr "Most Used Categories"
+
+#: 404.php:20 inc/template-tags.php:170
+#: inc/widgets/BootstrapBasicSearchWidget.php:101 searchform.php:13
+msgid "Search"
+msgstr "Search"
+
+#: 404.php:17 inc/template-tags.php:167
+msgctxt "label"
+msgid "Search &hellip;"
+msgstr "Search &hellip;"
+
+#: 404.php:17 inc/template-tags.php:167
+#: inc/widgets/BootstrapBasicSearchWidget.php:98 searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "Search &hellip;"
+
+#: 404.php:11
+msgid "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+msgstr "It looks like nothing was found at this location. Maybe try one of the links below or a search?"
+
+#: 404.php:7
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "Oops! That page can&rsquo;t be found."
+
+#. Theme URI of the plugin/theme
+msgid "http://rundiz.com"
+msgstr "http://rundiz.com"
+
+#. Author of the plugin/theme
+msgid "Vee Winch"
+msgstr "Vee Winch"

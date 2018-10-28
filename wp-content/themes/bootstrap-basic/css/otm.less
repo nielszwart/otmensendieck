@@ -1,0 +1,339 @@
+/**
+ *	Our overruling custom css file
+ */
+
+
+/**
+ * SETUP
+ */
+@purple-dark: #520860;
+@purple-light: #dac7db;
+@orange: #FF6E00;
+@white: #FFF;
+
+html, body {
+	height: 100%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+h1 {
+	color: @purple-dark;
+}
+
+/**
+ * HEADER AND NAVIGATION
+ */
+.site-branding {
+	background-color: @purple-light;
+	text-align: center;
+	border-bottom: 5px solid @purple-dark;
+}
+
+.header-image {
+  height: 350px;
+  width: 100%;
+  background-repeat: no-repeat center center;
+  background-size: cover;
+  background-position: bottom;
+  padding-top: 15px;
+}
+
+.navbar .container {
+  padding: 0;
+}
+
+.nav-justified {
+  background-color: #eee;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.nav-justified > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: @purple-dark;
+  text-align: center;
+  background-color: @purple-light; /* Old browsers */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@purple-light), to(@purple-light));
+  background-image: -webkit-linear-gradient(top, @purple-light 0%, @purple-light 100%);
+  background-image:      -o-linear-gradient(top, @purple-light 0%,@purple-light 100%);
+  background-image:         linear-gradient(to bottom, @purple-light 0%,@purple-light 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@purple-light', endColorstr='@purple-light',GradientType=0 ); /* IE6-9 */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  border-bottom: 1px solid #d5d5d5;
+}
+.nav-justified > .current-menu-item > a,
+.nav-justified > .current-menu-item > a:hover,
+.nav-justified > .current-menu-item > a:focus,
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus,
+.nav-justified > li > a:hover,
+.nav-justified > li > a:focus {
+	color: @white;
+  background-color: @purple-dark;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+          box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+}
+.nav-justified > li:first-child > a {
+  border-radius: 5px 5px 0 0;
+}
+.nav-justified > li:last-child > a {
+  border-bottom: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+@media (min-width: 768px) {
+  .nav-justified {
+    max-height: 52px;
+  }
+  .nav-justified > li > a {
+    border-right: 2px solid @white;
+    border-left: 1px solid #fff;
+  }
+  .nav-justified > li:first-child > a {
+    border-left: 0;
+    border-radius: 5px 0 0 5px;
+  }
+  .nav-justified > li:last-child > a {
+    border-right: 0;
+    border-radius: 0 5px 5px 0;
+  }
+}
+
+.navbar-toggle .icon-bar {
+    background-color: @purple-dark;
+}
+
+.navbar-toggle {
+  position: absolute;
+  top: -93px;
+  right: -14px;
+  float: right;
+}
+
+.navbar-toggle .icon-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+#nav-header .navbar-toggle {
+    background-color: whitesmoke;
+    background-image: none;
+    border: none;
+}
+
+@media (max-width:980px){
+    li.menu-item {
+      width: 29%;
+    }
+}
+
+@media (max-width: 768px){
+    li.menu-item {
+      width: 100%;
+    }
+}
+
+@media (max-width: 520px){
+    li.menu-item {
+      width: 100%;
+	  height: 34px;
+    }
+}
+
+
+.site-title.site-description {
+	color: @purple-light;
+}
+
+.main-logo {
+	height: 100px;	
+}
+
+.logo {
+	height: 100px;	
+}
+
+.site-content {
+  width: 750px;
+  margin: 0 200px;
+  min-height: 203px;
+}
+
+@media (max-width: 768px) {
+  .site-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+/**
+ * PAGES
+ */
+ #main-column .page {
+ 	border: none;
+ }
+
+#map {
+	height: 450px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  #map {
+    float: right;
+  }
+}
+
+.nf-form-fields-required,
+.nf-form-errors,
+.nf-error-wrap {
+	display: none;
+} 
+
+.nf-after-form-content {
+	display: block;
+	height: 75px;
+}
+
+/***
+* NIEUWS
+*/
+.list-item {
+  height: 120px;
+}
+
+.list-image {
+  float: left;
+  width: 120px;
+  height: 120px;
+  background-size: cover;
+  margin-right: 10px;
+}
+
+.single-image {
+  float: right;
+  width: 200px;
+  height: 200px;
+  background-size: cover;
+  margin-left: 10px;  
+  margin-top: 50px;
+}
+
+.news-date {
+  font-weight: bold;
+}
+
+
+
+/***
+* BEHANDELINGEN OVERZICHT PAGE
+*/
+.menu-behandelingen-container {
+  margin: 50px auto 0 auto;
+  height: 200px
+}
+
+#menu-behandelingen {
+  list-style-type: none;
+}
+
+#menu-behandelingen > li {
+  display: block;
+  float: left;
+  margin-left: 25px;
+  margin-bottom: 25px;
+}
+
+#menu-behandelingen > li > a {
+  display: flex;
+  height: 175px;
+  width: 175px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  font-weight: bold;
+  color: @purple-dark;
+  text-align: center;
+  background-color: @purple-light; /* Old browsers */
+  background-image: -webkit-gradient(linear, left top, left bottom, from(@purple-light), to(@purple-light));
+  background-image: -webkit-linear-gradient(top, @purple-light 0%, @purple-light 100%);
+  background-image:      -o-linear-gradient(top, @purple-light 0%,@purple-light 100%);
+  background-image:         linear-gradient(to bottom, @purple-light 0%,@purple-light 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='@purple-light', endColorstr='@purple-light',GradientType=0 ); /* IE6-9 */
+  background-repeat: repeat-x; /* Repeat the gradient */
+  border: 1px solid @purple-dark;
+  border-radius: 5px;
+}
+
+#menu-behandelingen > li > a:hover,
+#menu-behandelingen > li > a:focus {
+  text-decoration: none;
+  color: @white;
+  background-color: @purple-dark;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+          box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+}
+
+#menu-menu .current-page-ancestor > a {
+  text-decoration: none;
+  color: @white;
+  background-color: @purple-dark;
+  background-image: none;
+  -webkit-box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+          box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+}
+
+/**
+* FOOTER
+*/
+.spacemaker {
+  margin-bottom: 300px;
+  clear: both;
+}
+
+ .copyright {
+	text-align: center;
+	font-weight: bold;
+	font-size: 11px;
+	margin-top: 20px;
+}
+
+
+
+#site-footer {
+	position: relative;
+	margin-top: -467px;
+	clear: both;
+	height: 467px;
+	padding: 0;
+	border: none;
+	background-image: url("/wp-content/themes/bootstrap-basic/img/footer.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	padding-top: 425px;
+	color: @white;
+	z-index: -1;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #f5f5f5;
+	background: url("/wp-content/themes/bootstrap-basic/img/footer.png");
+	-webkit-background-size: 100% 100%;
+	-moz-background-size: 100% 100%;
+	-o-background-size: 100% 100%;
+	background-size:  100% 100%;
+}
