@@ -1,0 +1,26 @@
+{% extends 'admin/general/base.html.twig' %}
+
+{% block title %}Edit media{% endblock %}
+
+{% block body %}
+	<div class="heading">
+		<div class="actions">
+			<a class="back-button" href="{{ path('admin_media_overview') }}">Back to overview</a>
+			<a class="delete-button" data-fancybox data-src="#modal">Delete this file</a>
+		</div>
+		<h1>Edit media</h1>
+	</div>
+
+	{% include "admin/media/_form.html.twig" %}
+{% endblock %}
+
+{% block modal %}
+	<h2>Are you sure?</h2>
+	<p>You can't undo deleting this file</p>
+
+	<form method="post" action="{{ path('admin_media_delete', {'id': media.id}) }}">
+		<input type="hidden" name="id" value="{{ media.id }}">
+		<button type="submit" class="confirm-button">Confirm</button>
+	</form>
+	<a data-fancybox-close class="cancel-button">Cancel</a>
+{% endblock %}

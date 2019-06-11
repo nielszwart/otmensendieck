@@ -1,0 +1,19 @@
+<div style="display: none;" id="modal">
+	<h2>
+		{% if title is defined %}
+			{{ title }}
+		{% else %}
+			Are you sure?
+		{% endif %}
+	</h2>
+	<p>
+		{% if text is defined %}
+			{{ text }}
+		{% else %}
+			Just checking!
+		{% endif %}
+	</p>
+
+	<a href="{{ action }}">Confirm</a>
+	<a href="#">Cancel</a>
+</div>

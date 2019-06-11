@@ -1,0 +1,12 @@
+{% set width = width is defined ? width : '' %}
+<div class="form-field{% if width == 'half' %} half{% elseif width == 'short' %} short{% endif %}">
+    {{ form_label(field) }}
+
+    {{ form_widget(field) }}
+
+    <span class="help">{{ form_help(field) }}</span>
+
+    <div class="form-error">
+        {{ form_errors(field) }}
+    </div>
+</div>

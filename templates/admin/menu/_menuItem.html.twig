@@ -1,0 +1,54 @@
+{% set new = (item is defined) ? 0 : 1 %}
+{% set counter = (new) ? 'counter' : loop.index0 %}
+
+
+<div{% if new %} id="new-menu-item"{% endif %} class="menu-item{% if new %} hidden{% endif %}">
+    {% if not new %}
+        <input type="hidden" name="menu_items[{{ counter }}][id]" value="{{ item.id }}">
+    {% endif %}
+
+    <div class="form-field short">
+        <label for="menu_items[{{ counter }}][name]" class="required">Link title</label>
+        <input id="menu_items[{{ counter }}][name]" type="text" name="menu_items[{{ counter }}][name]" required="required" {% if not new %} value="{{ item.name }}"{% endif %}>
+    </div>
+
+    <div class="form-field short link-type-field">
+        <label for="menu_items[{{ counter }}][linkType]" class="required">Link type</label>
+        <select id="menu_items[{{ counter }}][linkType]" name="menu_items[{{ counter }}][linkType]">
+            <option value="">Select type of menu item</option>
+            <option value="url"{% if not new and item.linkType == 'url' %} selected{% endif %}>URL</option>
+            <option value="page"{% if not new and item.linkType == 'page' %} selected{% endif %}>Page</option>
+        </select>
+    </div>
+
+    <div id="url-field" class="form-field{% if new or item.linkType != 'url' %} hidden{% endif %}">
+        <label for="menu_items[{{ counter }}][url]" class="required">URL</label>
+        <input id="menu_items[{{ counter }}][url]" type="text" name="menu_items[{{ counter }}][url]" {% if not new %} value="{{ item.url }}"{% endif %}>
+    </div>
+
+    <div id="page-field" class="form-field{% if new or item.linkType != 'page' %} hidden{% endif %}">
+        <label for="menu_items[{{ counter }}][linkTypeId]" class="required">Select page</label>
+        <select id="menu_items[{{ counter }}][linkTypeId]" name="menu_items[{{ counter }}][linkTypeId]">
+            <option value="">Select which page to link to</option>
+            {% for page in pages %}
+                <option value="{{ page.id }}"{% if not new and item.linkTypeId == page.id %} selected{% endif %}>{{ page.title }} ({{ page.code }})</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="form-field short">
+        <label for="menu_items[{{ counter }}][target]" class="required">Open link in</label>
+        <select id="menu_items[{{ counter }}][target]" name="menu_items[{{ counter }}][target]">
+            <option value="_self"{% if not new and item.target == '_self' %} selected{% endif %}>Same tab</option>
+            <option value="_blank"{% if not new and item.target == '_blank' %} selected{% endif %}>New tab</option>
+        </select>
+    </div>
+
+    <div class="form-field short">
+        <label for="menu_items[{{ counter }}][position]" class="required">Position</label>
+        <input id="menu_items[{{ counter }}][position]" type="number" name="menu_items[{{ counter }}][position]" {% if not new %} value="{{ item.position }}"{% endif %}>
+    </div>
+
+    <button type="button" class="btn-red remove-menu-item"{% if not new %} data-id="{{ item.id }}"{% endif %}>Remove menu item</button>
+</div>
+<div class="clear">&nbsp;</div>

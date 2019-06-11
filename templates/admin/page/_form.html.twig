@@ -1,0 +1,19 @@
+<div class="form">
+	{{ form_start(form) }}
+	    <div class="errors">
+	        {{ form_errors(form) }}
+	    </div>
+
+	    {% include 'admin/forms/input.html.twig' with {field: form.code, width: 'short'} %}
+	    {% include 'admin/forms/input.html.twig' with {field: form.slug, width: 'short'} %}
+	    {% include 'admin/forms/input.html.twig' with {field: form.title} %}
+	    {% include 'admin/forms/input.html.twig' with {field: form.content} %}
+	    {% include 'admin/forms/input.html.twig' with {field: form.meta_title} %}
+	    {% include 'admin/forms/input.html.twig' with {field: form.meta_keywords} %}
+	    {% include 'admin/forms/input.html.twig' with {field: form.meta_description} %}
+	    {% include 'admin/forms/input.html.twig' with {field: form.active} %}
+
+	    <button type="submit" class="save">Save</button>
+
+	{{ form_end(form) }}
+</div>

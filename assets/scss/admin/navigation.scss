@@ -1,0 +1,69 @@
+.toolbar {
+	position: fixed;
+	background-color: $navColor;
+	font-size: 15px;
+	color: white;
+	width: 100%;
+	height: $toolbarHeight;
+	line-height: $toolbarHeight;
+	z-index: 10;
+
+	.logo {
+		float: left;
+		width: calc(#{$toolbarHeight} - 10px);
+		height: calc(#{$toolbarHeight} - 10px);
+		margin: 5px 20px 0;
+	}
+
+	.logout {
+		float: right;
+		margin-right: 25px;
+	}
+
+	a,
+	a:visited {
+		color: white;
+	}
+}
+
+.navigation {
+	background-color: $navColor;
+	color: white;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: $navigationWidth;
+	height: 100%;
+	margin-top: $toolbarHeight;
+	z-index: 10;
+
+	.nav-items {
+		padding: 5px 0;
+		border-top: 1px solid grey;
+
+		.nav-item {
+			padding: 5px 0 5px 20px;
+			position: relative;
+		}
+		
+		.active {
+			background-color: #0073AA;
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: 0;
+				top: 0;
+			    border-bottom: $navActiveTrianglePixels solid transparent;
+			    border-top: $navActiveTrianglePixels solid transparent;
+			    border-right: $navActiveTrianglePixels solid $backgroundColor;
+			}
+		}
+	}
+
+	a,
+	a:visited {
+		color: white;
+	}
+}
+

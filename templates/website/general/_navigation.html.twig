@@ -1,0 +1,8 @@
+<div class="navigation">
+    <div class="navigation-positioning">
+        <div class="logo">
+            <a href="{{ path('index') }}"><img src="{{ getMedia('logo') }}" alt="logo"></a>
+        </div>
+        {% include 'website/general/_menu.html.twig' with {code: 'main'} %}
+    </div>
+</div>

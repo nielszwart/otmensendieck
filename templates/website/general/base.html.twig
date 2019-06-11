@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Symfony CMS{% endblock %}</title>
+
+        {% block metatags %}{% endblock %}
+
+        {% block stylesheets %}
+            <link href="https://fonts.googleapis.com/css?family=Volkhov&display=swap" rel="stylesheet">
+            {{ encore_entry_link_tags('website') }}
+        {% endblock %}
+    </head>
+    <body>
+        {% include "website/general/_navigation.html.twig" %}
+
+        <div class="wrapper{% if homepage is defined %} homepage{% endif %}">
+            {% block body %}{% endblock %}
+        </div>
+
+        {% include "website/general/_footer.html.twig" %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('website') }}
+        {% endblock %}
+    </body>
+</html>

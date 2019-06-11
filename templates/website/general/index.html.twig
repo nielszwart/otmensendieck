@@ -1,0 +1,60 @@
+{% extends 'website/general/base.html.twig' %}
+
+{% block title %}G. Zwart - {% trans %}Oefentherapie Mensendieck{% endtrans %}{% endblock %}
+
+{% block body %}
+	<div class="homepage">
+		{% if blocks.homepage_image is defined %}
+			{% include 'website/general/_header-image.html.twig' with {block: blocks.homepage_image} %}
+		{% endif %}
+
+		{% if blocks.homepage_1 is defined %}
+			<div class="homepage-block homepage-block-one">
+				<div class="left">
+					<div class="circle-image" style="background-image: url('{{ asset('media/' ~ blocks.homepage_1.image.name) }}');"></div>
+				</div>
+				<div class="right">
+					<div class="text">
+                        {{ blocks.homepage_1.content|raw }}
+					</div>
+				</div>
+			</div>
+		{% endif %}
+        {% if blocks.homepage_2 is defined %}
+			<div class="homepage-block homepage-block-two">
+				<div class="left">
+					<div class="text">
+                        {{ blocks.homepage_2.content|raw }}
+					</div>
+				</div>
+				<div class="right">
+					<div class="circle-image" style="background-image: url('{{ asset('media/' ~ blocks.homepage_2.image.name) }}');"></div>
+				</div>
+			</div>
+        {% endif %}
+        {% if blocks.homepage_3 is defined %}
+			<div class="homepage-block homepage-block-three">
+				<div class="left">
+					<div class="circle-image" style="background-image: url('{{ asset('media/' ~ blocks.homepage_3.image.name) }}');"></div>
+				</div>
+				<div class="right">
+					<div class="text">
+                        {{ blocks.homepage_3.content|raw }}
+					</div>
+				</div>
+			</div>
+        {% endif %}
+        {% if blocks.homepage_4 is defined %}
+			<div class="homepage-block homepage-block-four">
+				<div class="left">
+					<div class="text">
+                        {{ blocks.homepage_4.content|raw }}
+					</div>
+				</div>
+				<div class="right">
+					<div class="circle-image" style="background-image: url('{{ asset('media/' ~ blocks.homepage_4.image.name) }}');"></div>
+				</div>
+			</div>
+        {% endif %}
+	</div>
+{% endblock %}

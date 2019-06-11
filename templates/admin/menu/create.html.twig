@@ -1,0 +1,24 @@
+{% extends 'admin/general/base.html.twig' %}
+
+{% block title %}Add menu{% endblock %}
+
+{% block body %}
+    <div class="heading">
+        <div class="actions">
+            <a class="back-button" href="{{ path('admin_menu_overview') }}">Back to overview</a>
+        </div>
+        <h1>Add menu</h1>
+    </div>
+
+    {% include "admin/menu/_form.html.twig" %}
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script>
+        let deleteLink = "{{ path('admin_menu_item_delete_ajax', {id: 0}) }}";
+    </script>
+    {{ encore_entry_script_tags('menus') }}
+{% endblock %}

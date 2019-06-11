@@ -1,0 +1,174 @@
+body {
+	height: 100%;
+	width: 100%;
+	font-family: 'Open Sans', sans-serif;
+	background-color: $backgroundColor;
+}
+
+admin {
+	height: 100%;
+	width: 100%;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+a {
+	color: $linkColor;
+
+	&:visited {
+		color: $linkColor;
+	}
+}
+
+button {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 16px;
+}
+
+h1 {
+	display: inline-block;
+}
+
+.admin {
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.btn {
+	@include button;
+}
+
+.btn-red {
+	@extend .btn;
+	background-color: $red;
+	&:hover {
+		background-color: #710000;
+	}
+}
+
+.confirm-button {
+	@extend .btn-red;
+	position: absolute;
+	left: 44px;
+	bottom: 44px;
+}
+.cancel-button {
+	@extend .btn;
+	position: absolute;
+	right: 44px;
+	bottom: 44px;
+}
+.confirm-button,
+.cancel-button {
+	width: 150px;
+}
+a.back-button {
+	@extend .btn;
+	margin-top: 25px;
+	padding: 5px 10px;
+}
+a.add-button {
+	@extend .btn;
+}
+a.delete-button {
+	@extend .btn-red;
+}
+a.add-button,
+a.delete-button {
+	float: right;
+	margin-top: 25px;
+	padding: 5px 10px;
+}
+
+.admin-container {
+	position: relative;
+	margin-left: $navigationWidth;
+	padding: $toolbarHeight 20px 0;
+	height: 100%;
+	width: auto;
+}
+
+.hidden {
+	display: none;
+}
+
+.modal {
+	min-width: 600px;
+	min-height: 300px;
+}
+
+table.overview {
+	background-color: white;
+	width: 100%;
+	border-collapse: collapse;
+
+	th, td {
+		padding-left: 10px;
+
+		&.tick {
+			width: 25px;
+			padding: 0 10px;
+		}
+
+		&.boolean {
+			width: 40px;
+			text-align: center;
+			padding: 0 5px;
+
+			.circle {
+				margin: 0 auto;
+			}
+		}
+	}
+
+	thead {
+		text-align: left;
+		border: 1px solid $overViewTableBorderColor;
+
+		th {
+			height: 35px;
+		}
+	}
+	tbody {
+		border: 1px solid $overViewTableBorderColor;
+		border-top: 2px solid $overViewTableBorderColor;
+
+		td {
+			height: $cellHeight;
+
+			a {
+				font-weight: 600;
+			}
+
+			.circle {
+				border: 1px solid black;
+				border-radius: 50%;
+				width: 15px;
+				height: 15px;
+			}
+			.circle.green {
+				background-color: $green;
+			}
+			.circle.red {
+				background-color: $red;
+			}
+
+			img.thumbnail {
+				height: 100%;
+				width: auto;
+			}
+		}
+
+		tr {
+			&:nth-child(even) {
+				background-color: $overviewTableZebraColor;
+			}
+		}
+	}
+
+}

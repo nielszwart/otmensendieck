@@ -1,0 +1,65 @@
+.homepage {
+
+  .homepage-block {
+    height: 350px;
+    width: 100%;
+
+    .left,
+    .right {
+      float: left;
+      width: 50%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+
+    }
+
+    .left .text {
+      padding-left: 75px;
+    }
+
+    .right .text {
+      padding-right: 75px;
+    }
+
+    .circle-image {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50%;
+      overflow: hidden;
+      border: 5px solid $orange;
+      background-color: $white;
+    }
+  }
+
+  .homepage-block-one {
+    border-bottom: 5px solid $orange;
+  }
+
+  .homepage-block-two {
+    border-bottom: 5px solid $purple;
+
+    .circle-image {
+      border: 5px solid $purple;
+    }
+  }
+
+  .homepage-block-three {
+    border-bottom: 5px solid $orange;
+  }
+
+  .homepage-block-four {
+
+    .circle-image {
+      border: 5px solid $purple;
+    }
+  }
+}

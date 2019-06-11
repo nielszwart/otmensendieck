@@ -1,0 +1,38 @@
+{% extends 'admin/general/base.html.twig' %}
+
+{% block title %}Media{% endblock %}
+
+{% block body %}
+	<div class="heading">
+		<h1>Media</h1>
+		<a class="add-button" href="{{ path('admin_media_create') }}">Add new</a>		
+	</div>
+
+	<table class="overview">
+		<thead>
+			<tr>
+				<th class="tick"><input id="overview-table-toggle-all" type="checkbox"></th>
+				<th>Thumbnail</th>
+				<th>Name</th>
+				<th>Mime type</th>
+				<th>Size</th>
+				<th>Updated at</th>
+				<th>Code</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for file in media %}
+				<tr>
+					<td class="tick"><input class="toggle" type="checkbox"></td>
+					<td><a href="{{ path('admin_media_edit', {'id': file.id}) }}"><img class="thumbnail" src="{{ asset('media/' ~ file.image.name) }}"></a></td>
+					<td><a href="{{ path('admin_media_edit', {'id': file.id}) }}">{{ file.image.name }}</a></td>
+					<td>{{ file.image.mimeType }}</td>
+					<td>{{ file.image.size|formatBytes() }}</td>
+					<td>{{ file.updatedAt|date("j F Y - H:i:s") }}</td>
+					<td>{{ file.code }}</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	
+{% endblock %}

@@ -1,0 +1,15 @@
+{% extends 'website/general/base.html.twig' %}
+
+{% block title %}{% if page.metaTitle %}{{ page.metaTitle }}{% else %}{{ page.title }}{% endif %}{% endblock %}
+
+{% block metatags %}
+    <meta name="keywords" content="{{ page.metaKeywords }}">
+    <meta name="description" content="{{ page.metaDescription }}">
+{% endblock %}
+
+{% block body %}
+    <div class="page">
+        <h1>{{ page.title }}</h1>
+        {{ page.content|raw }}
+    </div>
+{% endblock %}

@@ -1,0 +1,9 @@
+<footer>
+    <div class="footer">
+        <p class="copyright">
+            &copy; {{ 'now'|date('Y') }}
+            {% if blocks.footer is defined %}{{ blocks.footer.content|striptags }}{% endif %}
+        </p>
+        {% include 'website/general/_menu.html.twig' with {code: 'footer'} %}
+    </div>
+</footer>

@@ -1,0 +1,30 @@
+{% extends 'admin/general/base.html.twig' %}
+
+{% block title %}Administrators{% endblock %}
+
+{% block body %}
+	<div class="heading">
+		<h1>Administrators</h1>
+		<a class="add-button" href="{{ path('admin_register') }}">Add new</a>		
+	</div>
+
+	<table class="overview">
+		<thead>
+			<tr>
+				<th class="tick"><input id="overview-table-toggle-all" type="checkbox"></th>
+				{# <th class="boolean">Active</th> #}
+				<th>Email</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for admin in admins %}
+				<tr>
+					<td class="tick"><input class="toggle" type="checkbox"></td>
+					{# <td class="boolean"><div class="circle {{ page.active ? 'green' : 'red' }}">&nbsp;</div></td> #}
+					<td><a href="">{{ admin.email }}</a></td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+	
+{% endblock %}

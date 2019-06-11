@@ -1,0 +1,15 @@
+{% extends 'admin/general/base.html.twig' %}
+
+{% block title %}Add media{% endblock %}
+
+{% block body %}
+	<div class="heading">
+		<div class="actions">
+			<a class="back-button" href="{{ path('admin_media_overview') }}">Back to overview</a>
+		</div>
+		<h1>Add media</h1>
+	</div>
+
+	{% include "admin/media/_form.html.twig" %}
+	
+{% endblock %}

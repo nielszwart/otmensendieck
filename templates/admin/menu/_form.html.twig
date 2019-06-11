@@ -1,0 +1,25 @@
+<div class="form">
+    {{ form_start(form) }}
+        <div class="errors">
+            {{ form_errors(form) }}
+        </div>
+
+        {% include 'admin/forms/input.html.twig' with {field: form.code, width: 'short'} %}
+        {% include 'admin/forms/input.html.twig' with {field: form.name, width: 'short'} %}
+
+        <h2>Menu items</h2>
+
+        <button id="add-new-menu-item" type="button" class="btn">Add new menu item</button>
+
+        <div id="menu-items">
+            {% for item in menu.items %}
+                {% include 'admin/menu/_menuItem.html.twig' %}
+            {% endfor %}
+        </div>
+
+        <button type="submit" class="save">Save</button>
+
+    {{ form_end(form) }}
+
+    {% include 'admin/menu/_menuItem.html.twig' %}
+</div>

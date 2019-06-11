@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Symfony CMS{% endblock %}</title>
+
+        {% block stylesheets %}
+            <link href="https://fonts.googleapis.com/css?family=Open+Sans&amp;display=swap" rel="stylesheet">
+            <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+            {{ encore_entry_link_tags('admin') }}
+        {% endblock %}
+    </head>
+    <body>
+        <div class="admin">
+            {% include "admin/general/_flashes.html.twig" %} 
+            {% include "admin/general/_navigation.html.twig" %}
+            
+            <div class="admin-container">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+
+        <div style="display: none;" id="modal" class="modal">
+            {% block modal %}{% endblock %}
+        </div>
+
+        {% block javascripts %}
+            <script src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+            {{ encore_entry_script_tags('admin') }}
+        {% endblock %}
+    </body>
+</html>

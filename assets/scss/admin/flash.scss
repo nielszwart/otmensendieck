@@ -1,0 +1,50 @@
+@-webkit-keyframes fadeout {
+  100% { opacity: 0; }
+}
+
+@keyframes fadeout {
+  100% { opacity: 0; }
+}
+
+.flashes {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 10px;
+	width: 60%;
+	margin: 0 auto;
+	z-index: 999;
+	overflow: hidden;
+    -webkit-animation: fadeout 1s linear forwards;
+    animation: fadeout 1s linear forwards;
+    animation-delay: 3s;
+    opacity: 1;
+
+	.flash {
+		margin-bottom: 10px;
+		width: 100%;
+		height: 60px;
+		line-height: 60px;
+		text-align: center;
+		font-weight: 600;
+		border-radius: 3px;
+	}
+
+	.flash-success {
+		background-color: #ecfdec;
+		border: 1px solid #add0ad;
+		color: #008800;	
+	}
+
+	.flash-error {
+		background-color: #ffeef1;
+		border: 1px solid #f7bbbb;
+		color: #bd0000;
+	}
+
+	.flash-notice {
+		background-color: #e6f6fb;
+		border: 1px solid #a5a5e4;
+		color: #0246b1;
+	}
+}

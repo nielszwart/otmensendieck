@@ -1,0 +1,30 @@
+{% extends 'admin/general/base.html.twig' %}
+
+{% block title %}Menus{% endblock %}
+
+{% block body %}
+    <div class="heading">
+        <h1>Menus</h1>
+        <a class="add-button" href="{{ path('admin_menu_create') }}">Add new</a>
+    </div>
+
+    <table class="overview">
+        <thead>
+        <tr>
+            <th class="tick"><input id="overview-table-toggle-all" type="checkbox"></th>
+            <th>Code</th>
+            <th>Name</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for menu in menus %}
+            <tr>
+                <td class="tick"><input class="toggle" type="checkbox"></td>
+                <td><a href="{{ path('admin_menu_edit', {'id': menu.id}) }}">{{ menu.code }}</a></td>
+                <td><a href="{{ path('admin_menu_edit', {'id': menu.id}) }}">{{ menu.name }}</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+<div class="form">
+    {{ form_start(form) }}
+    <div class="errors">
+        {{ form_errors(form) }}
+    </div>
+
+    {#{% if edit is defined %}#}
+        {% include 'admin/forms/input.html.twig' with {field: form.code, width: 'short', disabled: (edit is defined ? 1 : 0)} %}
+    {#{% else %}#}
+        {#{% include 'admin/forms/input.html.twig' with {field: form.code, width: 'short'} %}#}
+    {#{% endif %}#}
+    {% include 'admin/forms/input.html.twig' with {field: form.content} %}
+    {% include 'admin/forms/input.html.twig' with {field: form.imageFile} %}
+
+    <button type="submit" class="save">Save</button>
+
+    {{ form_end(form) }}
+</div>

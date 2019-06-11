@@ -1,0 +1,35 @@
+// HEIGHTS AND WIDTHS
+$toolbarHeight: 35px;
+$navigationWidth: 250px;
+$cellHeight: 45px;
+$navActiveTrianglePixels: 16px;
+
+
+// COLORS
+$red: #b50000;
+$green: #007b00;
+$blue: #2578A8;
+$linkColor: $blue;
+
+$backgroundColor: #f1f1f1;
+$navColor: #222222;
+
+$overviewTableZebraColor: #f9f9f9;
+$overViewTableBorderColor: #e7e7e7;
+
+$inputBorderColor: #d1d1d1;
+
+// MIXINS
+@mixin button {
+	display: inline-block;
+	padding: 10px 20px;
+	color: white;
+	border: none;
+	background-color: $blue;
+	cursor: pointer;
+	text-align: center;
+
+	&:hover {
+		background-color: #195273;
+	}	
+}
