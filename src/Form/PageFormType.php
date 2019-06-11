@@ -10,6 +10,7 @@ use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Vich\UploaderBundle\Form\Type\VichImageType;
 
 class PageFormType extends AbstractType
 {
@@ -24,6 +25,12 @@ class PageFormType extends AbstractType
             ->add('meta_keywords', TextType::class, ['label' => 'Meta keywords', 'required' => false])
             ->add('meta_description', TextType::class, ['label' => 'Meta description', 'required' => false])
             ->add('active', CheckboxType::class, ['label' => 'Active','required' => false])
+            ->add('imageFile', VichImageType::class, [
+                'label' => 'Image',
+                'required' => false,
+                'allow_delete' => true,
+                'download_uri' => false,
+            ])
         ;
     }
 

@@ -1,0 +1,31 @@
+{% extends 'admin/general/base.html.twig' %}
+
+{% block title %}Contacts{% endblock %}
+
+{% block body %}
+    <div class="heading">
+        <h1>Contacts</h1>
+    </div>
+
+    <table class="overview">
+        <thead>
+        <tr>
+            <th class="tick"><input id="overview-table-toggle-all" type="checkbox"></th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date sent</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for contact in contacts %}
+            <tr>
+                <td class="tick"><input class="toggle" type="checkbox"></td>
+                <td><a href="{{ path('admin_contact_view', {'id': contact.id}) }}">{{ contact.name }}</a></td>
+                <td>{{ contact.email }}</td>
+                <td>{{ contact.dateSent|date('j F Y - H:i:s') }}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+{% endblock %}

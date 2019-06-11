@@ -12,7 +12,7 @@ class MediaDeleteController extends BaseController
     /**
      * @Route("/admin/media/delete/{id}", name="admin_media_delete", methods={"POST"})
      */
-    public function delete($id): Response
+    public function remove($id): Response
     {
         $media = $this->getDoctrine()->getRepository(Media::class)->find($id);
         if (empty($media)) {

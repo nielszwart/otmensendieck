@@ -5,7 +5,7 @@
 {% block body %}
 	<div class="homepage">
 		{% if blocks.homepage_image is defined %}
-			{% include 'website/general/_header-image.html.twig' with {block: blocks.homepage_image} %}
+			{% include 'website/general/_header-image.html.twig' with {imagePath: asset('media/' ~ blocks.homepage_image.image.name)} %}
 		{% endif %}
 
 		{% if blocks.homepage_1 is defined %}

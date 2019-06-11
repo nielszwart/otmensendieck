@@ -1,0 +1,20 @@
+<div id="map" class="googlemaps"></div>
+
+<div class="clear">&nbsp;</div>
+
+<div class="form contact-form">
+    {{ form_start(form) }}
+
+    <div class="errors">
+        {{ form_errors(form) }}
+    </div>
+
+    {% include 'website/forms/_input.html.twig' with {field: form.name} %}
+    {% include 'website/forms/_input.html.twig' with {field: form.email} %}
+    <input type="email" class="email-check" name="contact_form_email_check" value="">
+    {% include 'website/forms/_input.html.twig' with {field: form.message} %}
+
+    <button type="submit" class="btn btn-send">Versturen</button>
+
+    {{ form_end(form) }}
+</div>

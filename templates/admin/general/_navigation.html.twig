@@ -19,6 +19,9 @@
 		<li class="nav-item{% if navActive == 'menus' %} active{% endif %}"><a href="{{ path('admin_menu_overview') }}">Menus</a></li>
 	</ul>
 	<ul class="nav-items">
+		<li class="nav-item{% if navActive == 'contacts' %} active{% endif %}"><a href="{{ path('admin_contact_overview') }}">Contacts</a></li>
+	</ul>
+	<ul class="nav-items">
 		<li class="nav-item{% if navActive == 'administrators' %} active{% endif %}"><a href="{{ path('admin_administrator_overview') }}">Administrators</a></li>
 	</ul>		
 </div>
