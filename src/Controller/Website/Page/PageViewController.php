@@ -4,6 +4,7 @@ namespace App\Controller\Website\Page;
 
 use App\Controller\BaseController;
 use App\Entity\Contact;
+use App\Entity\Menu;
 use App\Entity\Page;
 use App\Entity\Signup;
 use App\Form\ContactFormType;
@@ -19,6 +20,23 @@ class PageViewController extends BaseController
      */
     public function page($slug, Request $request)
     {
+//        echo "<pre>";
+//        $menu = $this->getDoctrine()->getRepository(Menu::class)->findByCode('main');
+//        foreach ($menu->getItems() as $item) {
+//            if ($item->isActive()) {
+//
+//                foreach ($item->getSubmenuItems() as $submenuItem) {
+//                    if ($submenuItem->isActive()) {
+//                        echo $submenuItem->getName();
+//                    }
+//                }
+//            }
+//        }
+//
+//
+//        var_dump('x');
+//        exit;
+
         $page = $this->getDoctrine()->getRepository(Page::class)->findOneBy(['slug' => $slug]);
         if (empty($page)) {
             throw new HttpException(404, 'Page could not be found');

@@ -2,6 +2,7 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
@@ -50,6 +51,22 @@ class MenuItem
      * @ORM\ManyToOne(targetEntity="App\Entity\Menu", inversedBy="items")
      */
     private $menu;
+
+    /**
+     * @ORM\OneToMany(targetEntity="MenuItem", mappedBy="parent")
+     */
+    private $submenuItems;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="MenuItem", inversedBy="submenuItems")
+     */
+    private $parent;
+
+    public function __construct() {
+        $this->submenuItems = new ArrayCollection();
+    }
+
+    private $active = false;
 
     public function getId()
     {
@@ -109,7 +126,7 @@ class MenuItem
         return $this->menu;
     }
 
-    public function setMenu(Menu $menu): self
+    public function setMenu($menu): self
     {
         $this->menu = $menu;
 
@@ -136,6 +153,35 @@ class MenuItem
     public function setTarget($target): self
     {
         $this->target = $target;
+        return $this;
+    }
+
+    public function getSubmenuItems()
+    {
+        return $this->submenuItems;
+    }
+
+    public function getParent()
+    {
+        return $this->parent;
+    }
+
+    public function setParent($parent): self
+    {
+        $this->parent = $parent;
+
+        return $this;
+    }
+
+    public function isActive(): bool
+    {
+        return $this->active;
+    }
+
+    public function setActive(bool $active): self
+    {
+        $this->active = $active;
+
         return $this;
     }
 

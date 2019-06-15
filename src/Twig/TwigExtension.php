@@ -51,24 +51,13 @@ class TwigExtension extends AbstractExtension
 
     /**
      * @param $code
-     * @return string
+     * @return mixed
      */
     public function getMenu($code)
     {
-        $menu = $this->em->getRepository(Menu::class)->findOneBy(['code' => $code]);
+        $menu = $this->em->getRepository(Menu::class)->findByCode($code);
         if (empty($menu)) {
             return '';
-        }
-
-        foreach ($menu->getItems() as &$item) {
-            if ($item->getLinkType() === 'page') {
-                $page = $this->em->getRepository(Page::class)->find(['id' => $item->getLinkTypeId()]);
-                if (empty($page)) {
-                    continue;
-                }
-
-                $item->setUrl($this->urlGenerator->generate('page_view', ['slug' => $page->getSlug()]));
-            }
         }
 
         return $menu;

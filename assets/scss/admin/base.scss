@@ -39,6 +39,11 @@ h1 {
 	height: 100%;
 }
 
+.clear {
+	clear: both;
+	height: 0;
+}
+
 .btn {
 	@include button;
 }

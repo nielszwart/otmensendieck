@@ -2,7 +2,22 @@
 {% if menu %}
     <ul class="menu">
         {% for item in menu.items %}
-            <li class="menu-item"><a href="{{ item.url }}" target="{{ item.target }}">{{ item.name }}</a></li>
+            <li class="menu-item{% if item.active %} active{% endif %}">
+                {% if item.linkType %}
+                    <a href="{{ item.url }}" target="{{ item.target }}">{{ item.name }}</a>
+                {% else %}
+                    {{ item.name }}
+                {% endif %}
+                {% if item.submenuItems|length > 0 %}
+                    <ul class="submenu">
+                        {% for submenuItem in item.submenuItems %}
+                            <li class="submenu-item{% if submenuItem.active %} active{% endif %}">
+                                <a href="{{ submenuItem.url }}" target="{{ submenuItem.target }}">{{ submenuItem.name }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+        </li>
         {% endfor %}
     </ul>
 {% endif %}

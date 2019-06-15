@@ -1,4 +1,4 @@
-<div class="form">
+<div class="form menu">
     {{ form_start(form) }}
         <div class="errors">
             {{ form_errors(form) }}
@@ -9,15 +9,58 @@
 
         <h2>Menu items</h2>
 
-        <button id="add-new-menu-item" type="button" class="btn">Add new menu item</button>
+        <div class="left">
+            <div class="add-new">
+                <h3>Add menu item</h3>
 
-        <div id="menu-items">
-            {% for item in menu.items %}
-                {% include 'admin/menu/_menuItem.html.twig' %}
-            {% endfor %}
+                <div id="name-field" class="form-field">
+                    <label for="name">Link title</label>
+                    <input id="name" type="text" name="name">
+                </div>
+
+                <div class="form-field link-type-field">
+                    <label for="linkType">Link type</label>
+                    <select id="linkType" name=linkType">
+                        <option value="">Select type of menu item</option>
+                        <option value="page">Page</option>
+                        <option value="url">URL</option>
+                    </select>
+                </div>
+
+                <div id="page-field" class="form-field hidden">
+                    <label for="page" class="required">Select page</label>
+                    <select id="page" name="page">
+                        <option value="">Select which page to link to</option>
+                        {% for page in pages %}
+                            <option value="{{ page.id }}">{{ page.title }} ({{ page.code }})</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div id="url-field" class="form-field hidden">
+                    <label for="url">URL</label>
+                    <input id="url" type="text" name="url">
+                </div>
+
+                <button id="add-new-menu-item" type="button" class="btn add-menu-item">Add to menu</button>
+            </div>
+
+            <button type="submit" class="save">Save menu</button>
         </div>
 
-        <button type="submit" class="save">Save</button>
+        <div class="right">
+            <div id="menu-items" class="items">
+                {% set iteration = 0 %}
+                {% for menuItem in menu.items %}
+                    {% include 'admin/menu/_menuItem.html.twig' with {'item': menuItem} %}
+                    {% set iteration = iteration + 1 %}
+                    {% for subItem in menuItem.submenuItems %}
+                        {% include 'admin/menu/_menuItem.html.twig' with {'item': subItem, 'submenu': 1} %}
+                        {% set iteration = iteration + 1 %}
+                    {% endfor %}
+                {% endfor %}
+            </div>
+        </div>
 
     {{ form_end(form) }}
 

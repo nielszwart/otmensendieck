@@ -12,18 +12,13 @@
 		}
 
 		input,
-		select,
-		textarea {
-		    width: 100%;
-		    -webkit-box-sizing: border-box; 
-		    -moz-box-sizing: border-box;    
-		    box-sizing: border-box;         
+		select {
+			width: 100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
 			padding: 8px;
 			border: 1px solid $inputBorderColor;
-		}
-
-		textarea {
-			min-height: 150px;
 		}
 
 		input[type='checkbox'] {
@@ -49,15 +44,78 @@
 		height: 100px;
 		width: auto;
 	}
+}
+
+.form.menu {
+
+	.left {
+		float: left;
+		width: 250px;
+
+		.save {
+			display: block;
+			margin-top: 100px;
+		}
+
+		.add-new {
+			padding: 20px;
+			border: 2px solid $inputBorderColor;
+			-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+			box-shadow: 0 1px 1px rgba(0,0,0,.04);
+
+			.add-menu-item {
+				margin-top: 25px;
+				background-color: $green;
+			}
+		}
+	}
+
+	.right {
+		float: left;
+		width: 800px;
+		margin-left: 50px;
+		border: 2px solid $inputBorderColor;
+		padding: 40px 0 20px;
+		background-color: white;
+
+		.items {
+			margin-left: 50px;
+		}
+	}
 
 	.menu-item {
-		margin: 20px 0 0;
+		margin-bottom: 20px;
 		padding: 0 25px 25px;
-		border: 2px solid $inputBorderColor;
-		width: 40%;
+		border: 1px solid $inputBorderColor;
+		-webkit-box-shadow: 0 1px 1px rgba(0,0,0,.04);
+		box-shadow: 0 1px 1px rgba(0,0,0,.04);
+		width: 600px;
+		position: relative;
+		background-color: $backgroundColor;
 
 		.remove-menu-item {
 			margin-top: 25px;
 		}
+
+		.show-more {
+			position: absolute;
+			right: 25px;
+			top: 50px;
+			cursor: pointer;
+			width: 0;
+			height: 0;
+			border-left: 7px solid transparent;
+			border-right: 7px solid transparent;
+			border-top: 10px solid black;
+		}
+
+		.more {
+			height: 0;
+			overflow: hidden;
+		}
+	}
+
+	.submenu-item {
+		margin-left: 50px;
 	}
 }
