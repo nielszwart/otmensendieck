@@ -1,0 +1,130 @@
+@media only screen and (max-width: 1500px) {
+  .navigation {
+    .navigation-positioning {
+      .logo {
+        margin-left: 15px;
+      }
+    }
+  }
+
+  .page-content {
+    padding: 0 35px;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .navigation {
+    .menu {
+      .menu-item {
+        margin-left: 25px;
+
+        &:first-of-type {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .navigation {
+    height: $mobileNavigationHeight;
+
+    .navigation-positioning {
+      .menu {
+        display: none;
+      }
+
+      .logo {
+        height: $mobileNavigationHeight;
+
+        img {
+          height: 100%;
+        }
+      }
+
+      .mobile-menu {
+        display: block;
+
+        .menu.show {
+          display: block;
+        }
+      }
+    }
+  }
+
+  footer .footer {
+    height: auto;
+    display: block;
+
+    .copyright {
+      display: block;
+      font-size: 12px;
+    }
+
+    ul li {
+      margin-bottom: 5px;
+
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  .header-image {
+    height: 200px;
+
+    .signup-button {
+      width: 100px;
+      height: 100px;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
+
+  .homepage {
+    .homepage-block {
+      height: auto;
+      width: auto;
+      padding: 20px 50px;
+
+      .left,
+      .right {
+        float: none;
+        width: 100%;
+        height: auto;
+
+        .text {
+          padding: 0;
+        }
+      }
+
+      .circle-image {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
+
+  .page.tarieven {
+    table {
+      width: auto;
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .contact {
+    .editor-content {
+      width: 100%;
+    }
+
+    .googlemaps {
+      display: none;
+    }
+  }
+
+  .contact-form {
+    width: 100%;
+  }
+}

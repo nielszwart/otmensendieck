@@ -20,23 +20,6 @@ class PageViewController extends BaseController
      */
     public function page($slug, Request $request)
     {
-//        echo "<pre>";
-//        $menu = $this->getDoctrine()->getRepository(Menu::class)->findByCode('main');
-//        foreach ($menu->getItems() as $item) {
-//            if ($item->isActive()) {
-//
-//                foreach ($item->getSubmenuItems() as $submenuItem) {
-//                    if ($submenuItem->isActive()) {
-//                        echo $submenuItem->getName();
-//                    }
-//                }
-//            }
-//        }
-//
-//
-//        var_dump('x');
-//        exit;
-
         $page = $this->getDoctrine()->getRepository(Page::class)->findOneBy(['slug' => $slug]);
         if (empty($page)) {
             throw new HttpException(404, 'Page could not be found');
@@ -82,10 +65,5 @@ class PageViewController extends BaseController
             'page' => $page,
             'form' => isset($form) ? $form->createView() : null,
         ]);
-    }
-
-    protected function contact(Request $request)
-    {
-
     }
 }

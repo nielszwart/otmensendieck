@@ -1,21 +1,21 @@
 /*
-Error: Undefined variable: "$inputBorderColor".
-        on line 21 of assets/scss/admin/forms.scss
+Error: Undefined variable: "$orange".
+        on line 43 of assets/scss/website/homepage.scss
 
-16: 			width: 100%;
-17: 			-webkit-box-sizing: border-box;
-18: 			-moz-box-sizing: border-box;
-19: 			box-sizing: border-box;
-20: 			padding: 8px;
-21: 			border: 1px solid $inputBorderColor;
-22: 		}
-23: 
-24: 		input[type='checkbox'] {
-25: 			width: auto;
-26: 			padding: 0;
+38:       border-radius: 50%;
+39:       background-repeat: no-repeat;
+40:       background-size: contain;
+41:       background-position: 50%;
+42:       overflow: hidden;
+43:       border: 5px solid $orange;
+44:       background-color: $white;
+45:     }
+46:   }
+47: 
+48:   .homepage-block-one {
 
 Backtrace:
-assets/scss/admin/forms.scss:21
+assets/scss/website/homepage.scss:43
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/script/tree/variable.rb:49:in `_perform'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/script/tree/node.rb:50:in `perform'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/script/tree/list_literal.rb:75:in `block in _perform'
@@ -81,17 +81,18 @@ C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:46
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `each'
 C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:294:in `watch'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/plugin.rb:109:in `method_missing'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:358:in `watch_or_update'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/exec/sass_scss.rb:51:in `process_result'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/exec/base.rb:50:in `parse'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/exec/base.rb:18:in `parse!'
-C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/bin/sass:13:in `<top (required)>'
-C:/Ruby24-x64/bin/sass:23:in `load'
-C:/Ruby24-x64/bin/sass:23:in `<main>'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.7.4/lib/sass/plugin/compiler.rb:320:in `block in watch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
 */
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$inputBorderColor\".\A         on line 21 of assets/scss/admin/forms.scss\A \A 16: 			width: 100%;\A 17: 			-webkit-box-sizing: border-box;\A 18: 			-moz-box-sizing: border-box;\A 19: 			box-sizing: border-box;\A 20: 			padding: 8px;\A 21: 			border: 1px solid $inputBorderColor;\A 22: 		}\A 23: \A 24: 		input[type='checkbox'] {\A 25: 			width: auto;\A 26: 			padding: 0;"; }
+  content: "Error: Undefined variable: \"$orange\".\A         on line 43 of assets/scss/website/homepage.scss\A \A 38:       border-radius: 50%;\A 39:       background-repeat: no-repeat;\A 40:       background-size: contain;\A 41:       background-position: 50%;\A 42:       overflow: hidden;\A 43:       border: 5px solid $orange;\A 44:       background-color: $white;\A 45:     }\A 46:   }\A 47: \A 48:   .homepage-block-one {"; }

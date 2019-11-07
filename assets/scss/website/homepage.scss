@@ -4,9 +4,16 @@
     height: 350px;
     width: 100%;
 
+    .left {
+      float: left;
+    }
+
+    .right {
+      float: right;
+    }
+
     .left,
     .right {
-      float: left;
       width: 50%;
       height: 100%;
       margin: 0;
@@ -15,8 +22,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
-
     }
 
     .left .text {

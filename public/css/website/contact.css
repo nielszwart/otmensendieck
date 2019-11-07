@@ -1,0 +1,12 @@
+.contact .editor-content {
+  width: 60%;
+  float: left; }
+.contact .googlemaps {
+  width: 35%;
+  height: 500px;
+  float: right; }
+
+.contact-form {
+  width: 60%; }
+
+/*# sourceMappingURL=contact.css.map */
